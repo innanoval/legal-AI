@@ -1,5 +1,6 @@
 # Use the official Python image from Docker Hub
-FROM python:3.10-slim
+#FROM python:3.10-slim
+FROM python:3.11-slim
 
 # Set environment variables to prevent Python from writing pyc files and to buffer stdout/stderr
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -10,6 +11,7 @@ WORKDIR /app
 
 # Copy the requirements file into the container
 COPY package_requirements.txt .
+RUN pip install --no-cache-dir -r package_requirements.txt
 
 # Install system dependencies (if needed)
 RUN apt-get update && apt-get install -y --no-install-recommends \
