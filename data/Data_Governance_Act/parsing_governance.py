@@ -29,6 +29,7 @@ exclude_sections = [
     "The EU Cyber Diplomacy Toolbox"
 ]
 
+# Parsing of other directives-legislations
 # Splitting paragraphs into overlapping chunks
 def split_paragraph_with_overlap_characters(text, chunk_size=184, overlap=30):
     chunks = []
